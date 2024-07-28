@@ -1,1 +1,0 @@
-INSERT INTO tbl_user() VALUES();

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: h2
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ''
+    url: jdbc:h2:mem:testdb
+    username: sa
+    schema: classpath*:sql/schema.sql
+    data: classpath*:sql/data.sql
+    separator: ";" # 数据脚本中的语句分隔符 默认是;
+    continue-on-error: false # 如果脚本执行出现异常是否继续执行后续脚本，默认false
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
